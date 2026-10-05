@@ -10,14 +10,15 @@ main { position: relative; z-index: 2; min-height: 100svh; display: flex; flex-d
 h1 { margin: 0 0 24px; font-size: clamp(25px, 3.5vw, 36px); font-weight: 400; letter-spacing: .17em; padding-left: .17em; color: #eae5fa; text-shadow: 0 0 32px #b193ed26; }
 .eye-link { position: relative; display: grid; place-items: center; width: clamp(230px, 31vw, 330px); aspect-ratio: 1; border-radius: 50%; text-decoration: none; -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
 .eye-link:focus-visible { outline: 1px solid #e4d6ff; outline-offset: 5px; }
-.aura { position: absolute; inset: 10%; border-radius: 50%; background: radial-gradient(circle, #a585ee12, #a585ee03 50%, transparent 70%); box-shadow: 0 0 95px 12px #ad80fa08; transition: transform .8s ease, box-shadow .8s ease; }
 .eye { width: 51%; overflow: visible; filter: drop-shadow(0 0 10px #c9b3f55c); transition: filter .6s ease, transform .7s cubic-bezier(.2,.8,.2,1); }
 .eyelid { stroke: #e4d9ff; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
 .iris-ring { stroke: #ccbbf5; stroke-width: 1; opacity: .8; }
 .pupil { fill: #eee5ff; }
 .glint { fill: white; }
-.iris { transform-origin: 100px 60px; }
-.eye-link:hover .aura, .eye-link:focus-visible .aura { transform: scale(1.12); box-shadow: 0 0 115px 22px #ad80fa18; }
+.iris { transform-origin: 100px 60px; transition: opacity .25s ease; }
+.download-label { position: absolute; color: #f2eaff; font-size: clamp(10px, 1vw, 12px); font-weight: 500; letter-spacing: .14em; padding-left: .14em; opacity: 0; visibility: hidden; transform: translateY(4px); transition: opacity .25s ease, transform .25s ease, visibility .25s; pointer-events: none; }
+.eye-link:hover .iris, .eye-link:focus-visible .iris { opacity: 0; }
+.eye-link:hover .download-label, .eye-link:focus-visible .download-label { opacity: 1; visibility: visible; transform: translateY(0); }
 .eye-link:hover .eye, .eye-link:focus-visible .eye { transform: scale(1.045); filter: drop-shadow(0 0 17px #c9b3f599); }
 .eye-link:active .eye { transform: scale(.94); }
 .caption { text-align: center; margin-top: 25px; }
