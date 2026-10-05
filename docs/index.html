@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#080710">
+  <meta name="description" content="melatonin — 맥북 잠자기 방지 앱. Keep your Mac awake.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>melatonin</title>
+  <link rel="icon" href="eye.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="scene.js" defer></script>
+</head>
+<body>
+  <canvas id="atmosphere" aria-hidden="true"></canvas>
+  <div class="haze" aria-hidden="true"></div>
+  <main>
+    <h1>melatonin</h1>
+    <a class="eye-link" href="https://github.com/vumrra/melatonin/releases/latest/download/Melatonin.app.zip" aria-label="Melatonin Mac 앱 다운로드 (ZIP, Apple Silicon)" download="Melatonin.app.zip">
+      <span class="aura" aria-hidden="true"></span>
+      <svg class="eye" viewBox="0 0 200 120" fill="none" aria-hidden="true">
+        <path class="eyelid" d="M12 60C35 22 65 13 100 13s65 9 88 47c-23 38-53 47-88 47S35 98 12 60Z"/>
+        <g class="iris">
+          <circle class="iris-ring" cx="100" cy="60" r="25"/>
+          <circle class="pupil" cx="100" cy="60" r="13"/>
+          <circle class="glint" cx="106" cy="53" r="3"/>
+        </g>
+      </svg>
+    </a>
+    <div class="caption">
+      <p lang="ko">맥북 잠자기 방지 앱</p>
+      <p lang="en">Keep your Mac awake.</p>
+    </div>
+  </main>
+</body>
+</html>
